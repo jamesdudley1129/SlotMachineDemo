@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfpyxrv53kkgj"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/MainMenu.cs" id="1_u4e1t"]
+[ext_resource type="Texture2D" uid="uid://d3r6uaa6g2ss3" path="res://Assets/Textures/SymbolTextures/Symbol001.png" id="2_ic6yv"]
+[ext_resource type="Texture2D" uid="uid://bg5xkhddm50uc" path="res://Assets/Textures/SymbolTextures/Symbol002.png" id="4_bc341"]
+[ext_resource type="Texture2D" uid="uid://c1rlu6m3udv06" path="res://Assets/Textures/Icons/GearIcon.png" id="5_2is0r"]
+[ext_resource type="Texture2D" uid="uid://bh182v6k04cfy" path="res://Assets/Textures/Icons/EventsIcon.png" id="6_yasmk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u4e1t")
+
+[node name="newsboard" type="ReferenceRect" parent="."]
+custom_minimum_size = Vector2(780, 160)
+layout_mode = 0
+offset_top = 161.0
+offset_right = 780.0
+offset_bottom = 321.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="newsboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="ReferenceRect4" type="ReferenceRect" parent="newsboard/HBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="newsboard/HBoxContainer/ReferenceRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="newsboard/HBoxContainer/ReferenceRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2is0r")
+expand_mode = 1
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="newsboard/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="newsboard/HBoxContainer/ReferenceRect2"]
+modulate = Color(0, 0, 0, 0.521569)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -502.0
+offset_top = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="SplitContainer" type="SplitContainer" parent="newsboard/HBoxContainer/ReferenceRect2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewsArtical1" type="TextureRect" parent="newsboard/HBoxContainer/ReferenceRect2/SplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_ic6yv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NewsArtical2" type="TextureRect" parent="newsboard/HBoxContainer/ReferenceRect2/SplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_bc341")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="newsboard/HBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="newsboard/HBoxContainer/ReferenceRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="newsboard/HBoxContainer/ReferenceRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yasmk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Ad" type="ReferenceRect" parent="."]
+custom_minimum_size = Vector2(780, 140)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1141.0
+offset_right = 779.0
+offset_bottom = 1281.0
+
+[node name="Panel" type="Panel" parent="Ad"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3rfu37x8cjj1"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/slot_machine.cs" id="1_o3x5c"]
+[ext_resource type="Texture2D" uid="uid://w40rmwlg6o0l" path="res://Assets/Textures/Background/texture001.jpg" id="2_rign7"]
+[ext_resource type="Texture2D" uid="uid://e16sfwmwe7dv" path="res://Assets/Textures/Art/SlotMachineArt002.png" id="3_cmv11"]
+[ext_resource type="Texture2D" uid="uid://db2gup7l82tt" path="res://Assets/Textures/MachineFrames/Slot-Machine-Frame001.png" id="4_jw4li"]
+[ext_resource type="Texture2D" uid="uid://bm5j0hfkhysqa" path="res://Assets/Textures/Headboard/Header001.png" id="5_h8nqt"]
+
+[sub_resource type="QuadMesh" id="9"]
+
+[sub_resource type="QuadMesh" id="3"]
+
+[sub_resource type="QuadMesh" id="4"]
+
+[sub_resource type="QuadMesh" id="5"]
+
+[node name="SlotMachineFrame001" type="Node2D"]
+position = Vector2(395, 890)
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_o3x5c")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(-8.99994, 1)
+scale = Vector2(1302, -1276)
+mesh = SubResource("9")
+texture = ExtResource("2_rign7")
+
+[node name="Art Panel" type="MeshInstance2D" parent="."]
+position = Vector2(-6.5, 349.5)
+scale = Vector2(585, -461)
+mesh = SubResource("3")
+texture = ExtResource("3_cmv11")
+
+[node name="Frame" type="MeshInstance2D" parent="."]
+position = Vector2(-3.4454, -4.00001)
+scale = Vector2(722.637, -1228)
+mesh = SubResource("4")
+texture = ExtResource("4_jw4li")
+
+[node name="Header Panel" type="MeshInstance2D" parent="."]
+position = Vector2(3, -481)
+scale = Vector2(562.657, -130)
+mesh = SubResource("5")
+texture = ExtResource("5_h8nqt")
+
+[node name="Spin Button" type="Button" parent="."]
+offset_left = 115.0
+offset_top = -14.0
+offset_right = 229.0
+offset_bottom = 63.0
+action_mode = 0
+text = "Spin"
+
+[node name="Button" type="Button" parent="."]
+offset_left = -77.5
+offset_top = 45.8334
+offset_right = 74.5
+offset_bottom = 128.833
+text = "Main Menu"
+
+[connection signal="pressed" from="Spin Button" to="." method="_on_spin_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

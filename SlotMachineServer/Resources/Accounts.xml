@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfAccountDataObj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AccountDataObj>
+		<email>jamesdudley1129@gmail.com</email>
+		<username>JimmyJames</username>
+		<password>pass1234</password>
+		<date_created>5/20/23</date_created>
+		<last_TOS_date_accepted>5/29/23</last_TOS_date_accepted>
+		<slot_credits>9999999</slot_credits>
+		<vip_credits>200</vip_credits>
+	</AccountDataObj>
+</ArrayOfAccountDataObj>

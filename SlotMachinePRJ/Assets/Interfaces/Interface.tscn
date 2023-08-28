@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckqe7hsi52mex"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Interface.cs" id="1_agga0"]
+[ext_resource type="PackedScene" uid="uid://bkigga1tarhnw" path="res://Assets/Interfaces/login_interface.tscn" id="1_ebmh5"]
+[ext_resource type="Texture2D" uid="uid://dr5i0suchbj1u" path="res://Assets/Textures/Background/texture003.jpg" id="2_sqf8w"]
+[ext_resource type="PackedScene" uid="uid://daggb2riqx0ai" path="res://Assets/Interfaces/Profile_UI_headboard.tscn" id="4_ektsa"]
+[ext_resource type="PackedScene" uid="uid://dfpyxrv53kkgj" path="res://Assets/Interfaces/MainMenu.tscn" id="4_iqs0p"]
+[ext_resource type="PackedScene" uid="uid://d3pwthqn1fxpq" path="res://Assets/Interfaces/game_selection.tscn" id="5_dhtvo"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -640.0
+offset_right = 390.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_agga0")
+
+[node name="BackgroundNode" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(390, 610)
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundNode"]
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 769.0
+offset_top = -980.0
+offset_right = 2504.0
+offset_bottom = 548.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+texture = ExtResource("2_sqf8w")
+expand_mode = 1
+
+[node name="Game_Selection_Node" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameSelection" parent="Game_Selection_Node" instance=ExtResource("5_dhtvo")]
+visible = false
+layout_mode = 1
+
+[node name="ProfileNode" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Profile_UI_Headboard" parent="ProfileNode" instance=ExtResource("4_ektsa")]
+layout_mode = 0
+
+[node name="MainMenuNode" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" parent="MainMenuNode" instance=ExtResource("4_iqs0p")]
+visible = false
+layout_mode = 1
+
+[node name="LoginNode" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 290.0
+offset_right = 180.0
+offset_bottom = 330.0
+
+[node name="Login_Interface" parent="LoginNode" instance=ExtResource("1_ebmh5")]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 100.0
+offset_right = 500.0
+offset_bottom = 800.0
+grow_horizontal = 1
+grow_vertical = 1

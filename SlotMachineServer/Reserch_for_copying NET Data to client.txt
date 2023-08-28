@@ -1,0 +1,18 @@
+types of objects being sent over network
+
+SpinData
+GameData
+List<GameData>
+UserData
+TermOfServiceData
+
+Network Enumerators ServerSide
+Incoming Commands
+Outgoing Commands
+
+Network Switch Statements Serverside
+Print Command
+Proccess Commands(2)
+
+Dictionarys ServerSide
+Lookup

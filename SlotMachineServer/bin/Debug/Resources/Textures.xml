@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TextureData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <frameTexturesPath>res://Assets/Textures/MachineFrames/</frameTexturesPath>
+  <frameTextures>
+    <string>Slot-Machine-Frame001.png</string>
+  </frameTextures>
+  <artTexturesPath>res://Assets/Textures/Art/</artTexturesPath>
+  <artTextures>
+    <string>SlotMachineArt001.png</string>
+    <string>SlotMachineArt002</string>
+  </artTextures>
+  <headBoardTexturesPath>res://Assets/Textures/Headboard/</headBoardTexturesPath>
+  <headBoardTextures>
+    <string>Header001.png</string>
+  </headBoardTextures>
+  <symbolTexturesPath>res://Assets/Textures/SymbolTextures/</symbolTexturesPath>
+  <symbolTextures>
+    <string>Symbol001.png</string>
+    <string>Symbol002.png</string>
+  </symbolTextures>
+  <backgroundTexturesPath>res://Assets/Textures/Background/</backgroundTexturesPath>
+  <backgroundTextures>
+    <string>Black001.png</string>
+    <string>texture001.jpg</string>
+    <string>texture002.jpg</string>
+	<string>texture003.jpg</string>
+	<string>White001.png</string>
+  </backgroundTextures>
+</TextureData>

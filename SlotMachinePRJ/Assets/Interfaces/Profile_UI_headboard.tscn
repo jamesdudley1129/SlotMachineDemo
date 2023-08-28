@@ -1,0 +1,243 @@
+[gd_scene load_steps=6 format=3 uid="uid://daggb2riqx0ai"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/UI_headboard.cs" id="1_e6lb1"]
+[ext_resource type="Texture2D" uid="uid://w40rmwlg6o0l" path="res://Assets/Textures/Background/texture001.jpg" id="2_7j0l3"]
+[ext_resource type="Texture2D" uid="uid://d3r6uaa6g2ss3" path="res://Assets/Textures/SymbolTextures/Symbol001.png" id="3_vc4sd"]
+[ext_resource type="Texture2D" uid="uid://bcnyj4blybawo" path="res://Assets/Textures/Background/Black001.png" id="4_gjr42"]
+[ext_resource type="Texture2D" uid="uid://bg5xkhddm50uc" path="res://Assets/Textures/SymbolTextures/Symbol002.png" id="5_cc4g1"]
+
+[node name="Profile_UI_Headboard" type="ReferenceRect"]
+custom_minimum_size = Vector2(780, 160)
+offset_right = 780.0
+offset_bottom = 160.0
+script = ExtResource("1_e6lb1")
+
+[node name="ProfileTexture" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.882353)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -780.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_7j0l3")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+
+[node name="Profile" type="ReferenceRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(470, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ProfilePic" type="TextureRect" parent="VBoxContainer/HBoxContainer/Profile"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_right = 160.0
+offset_bottom = 80.0
+grow_vertical = 2
+texture = ExtResource("3_vc4sd")
+expand_mode = 3
+
+[node name="TextDevider" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Profile"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 166.0
+offset_top = -45.0
+offset_right = 486.0
+offset_bottom = 62.0
+grow_vertical = 2
+
+[node name="Username" type="Label" parent="VBoxContainer/HBoxContainer/Profile/TextDevider"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+text = "JimmyJames"
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/Profile/TextDevider/Username"]
+modulate = Color(1, 1, 1, 0.505882)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Slogin" type="Label" parent="VBoxContainer/HBoxContainer/Profile/TextDevider"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Slot Machine Slinger"
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/Profile/TextDevider/Slogin"]
+modulate = Color(1, 1, 1, 0.505882)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Profile_Btn" type="Button" parent="VBoxContainer/HBoxContainer/Profile"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Currency" type="ReferenceRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddCurrency_Btn" type="Button" parent="VBoxContainer/HBoxContainer/Currency"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VerticalDevider" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Currency"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Coins" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CoinDevider" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BaseCoin" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Backgroun" type="TextureRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/BaseCoin"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gjr42")
+expand_mode = 1
+
+[node name="Ballence" type="Label" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/BaseCoin"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -28.0
+offset_right = 161.0
+offset_bottom = 29.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "2000k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinPhoto" type="TextureRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/BaseCoin"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 61.0
+texture = ExtResource("5_cc4g1")
+expand_mode = 1
+
+[node name="VIPCoin" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Background" type="TextureRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/VIPCoin"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gjr42")
+expand_mode = 1
+
+[node name="Ballence" type="Label" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/VIPCoin"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -27.0
+offset_right = 162.0
+offset_bottom = 30.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "2000k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinPhoto" type="TextureRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/Coins/CoinDevider/VIPCoin"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 61.0
+texture = ExtResource("5_cc4g1")
+expand_mode = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Currency/VerticalDevider/ReferenceRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Get More Coins"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs8pg2m5u8o0t"]
+
+[ext_resource type="Texture2D" uid="uid://bm5j0hfkhysqa" path="res://Assets/Textures/Headboard/Header001.png" id="2_8xwk7"]
+
+[sub_resource type="QuadMesh" id="7"]
+
+[sub_resource type="QuadMesh" id="8"]
+
+[node name="VerticalOutput" type="Node2D"]
+
+[node name="Roller Background" type="MeshInstance2D" parent="."]
+position = Vector2(-3.5, 7)
+scale = Vector2(91, -290)
+mesh = SubResource("7")
+texture = ExtResource("2_8xwk7")
+
+[node name="Roller Item0" type="MeshInstance2D" parent="."]
+position = Vector2(-1.99997, 1)
+scale = Vector2(90, 86.0001)
+mesh = SubResource("8")
+
+[node name="Roller Item1" type="MeshInstance2D" parent="."]
+position = Vector2(-3, -94.0001)
+scale = Vector2(90, 86.0001)
+mesh = SubResource("8")
+
+[node name="Roller Item2" type="MeshInstance2D" parent="."]
+position = Vector2(-3, 96.0001)
+scale = Vector2(90, 86.0001)
+mesh = SubResource("8")

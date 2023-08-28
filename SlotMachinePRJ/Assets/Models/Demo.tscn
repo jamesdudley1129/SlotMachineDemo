@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwilptobio0gq"]
+
+[ext_resource type="PackedScene" uid="uid://c3rfu37x8cjj1" path="res://Assets/Models/Play Area Assets/SlotMachineFrame001.tscn" id="1_ins2f"]
+[ext_resource type="PackedScene" uid="uid://c3vpqrmqfq101" path="res://Assets/Models/Play Area Assets/PlayArea001.tscn" id="2_0cbfk"]
+[ext_resource type="PackedScene" uid="uid://bs8pg2m5u8o0t" path="res://Assets/Models/Play Area Assets/VerticalOutput001.tscn" id="3_v6b30"]
+
+[node name="SlotMachine" type="Node2D"]
+
+[node name="Slot Machine Frame" parent="." instance=ExtResource("1_ins2f")]
+
+[node name="PlayArea" parent="Slot Machine Frame" instance=ExtResource("2_0cbfk")]
+
+[node name="VerticalOutput" parent="Slot Machine Frame/PlayArea/OutputPannel/RollerAttachment0" index="0" instance=ExtResource("3_v6b30")]
+position = Vector2(-288, -456)
+
+[node name="VerticalOutput" parent="Slot Machine Frame/PlayArea/OutputPannel/RollerAttachment1" index="0" instance=ExtResource("3_v6b30")]
+
+[node name="VerticalOutput" parent="Slot Machine Frame/PlayArea/OutputPannel/RollerAttachment2" index="0" instance=ExtResource("3_v6b30")]
+
+[node name="VerticalOutput" parent="Slot Machine Frame/PlayArea/OutputPannel/RollerAttachment3" index="0" instance=ExtResource("3_v6b30")]
+
+[editable path="Slot Machine Frame"]
+[editable path="Slot Machine Frame/PlayArea"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf2bbue4xdc4m"]
+
+[ext_resource type="Texture2D" uid="uid://c3mbmf8a0pvbs" path="res://icon.svg" id="1_l4pkw"]
+
+[node name="Godot Credits" type="ReferenceRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_right = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Godot logo" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+texture = ExtResource("1_l4pkw")
+
+[node name="Credits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Built with the godot Engine"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
